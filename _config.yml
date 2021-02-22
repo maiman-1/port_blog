@@ -26,7 +26,7 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
 
@@ -38,7 +38,8 @@ defaults:
       type: "posts"
     values:
       # Any values that we want to store
-      layout: "post"
+      layout: "default"
+      author: "Muhammad Aiman Shamsiemon"
       permalink:  /:categories/:title
 
 # Exclude from processing.
