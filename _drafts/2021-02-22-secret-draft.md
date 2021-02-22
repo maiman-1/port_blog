@@ -1,8 +1,8 @@
 ---
-layout: post
 title:  "Secret Draft"
 date:   2021-02-22 10:30:09 +0800
 categories: jekyll start
+permalink: /:categories/:title
 ---
 
 You're not suppose to see this. This will not be rendered and shown on the site.
