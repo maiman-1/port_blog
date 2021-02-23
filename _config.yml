@@ -40,7 +40,7 @@ defaults:
       # Any values that we want to store
       layout: "default"
       author: "Muhammad Aiman Shamsiemon"
-      permalink:  /:categories/:title
+      permalink:  /:categories/:title.html
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

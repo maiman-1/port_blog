@@ -3,6 +3,6 @@ layout: default
 ---
 <div class="main-content" id="home">
   {% for post in site.posts %}
-      <li><a href="{{ post.url }}"> {{ post.title }} </a></li> <br>
+      <li><a href="{{ post.url | relative_url }}"> {{ post.title }} </a></li> <br>
   {% endfor %}
 </div>
