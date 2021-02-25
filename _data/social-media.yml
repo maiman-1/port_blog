@@ -1,0 +1,24 @@
+# Source code from https://jreel.github.io/social-media-icons-on-jekyll/
+email:
+  id: 'maimansham@gmail.com'
+  href: 'mailto:'
+  title: 'Email'
+  fa-icon: 'fa-envelope-square'
+
+twitter:
+  id: 'maimansham'
+  href: 'https://www.twitter.com/'
+  title: 'Twitter'
+  fa-icon: 'fa-twitter-square'
+
+github:
+  id: 'maiman-1'
+  href: 'https://github.com/'
+  title: 'GitHub'
+  fa-icon: 'fa-github-square'
+
+linkedin:
+  id: 'muhammad-aiman-bin-shamsiemon-2899a6197'
+  href: 'https://www.linkedin.com/in/'
+  title: 'LinkedIn'
+  fa-icon: 'fa-linkedin-square'
