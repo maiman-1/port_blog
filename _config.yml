@@ -43,6 +43,10 @@ defaults:
 sass:
   sass_dir: assets/css
 
+
+# Include images
+include:
+  - _static
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

@@ -1,0 +1,16 @@
+// With inspiration from minimal theme: https://github.com/pages-themes/minimal/blob/master/_sass/jekyll-theme-minimal.scss
+
+.div_div_two{
+  display: inline-block;
+  width: 100%;
+}
+.div_left {
+  width: 50%;
+  float: left;
+  -webkit-font-smoothing:subpixel-antialiased;
+}
+.div_right {
+  width: 50%;
+  float: right;
+  -webkit-font-smoothing:subpixel-antialiased;
+}
