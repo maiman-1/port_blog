@@ -1,5 +1,13 @@
 // With inspiration from minimal theme: https://github.com/pages-themes/minimal/blob/master/_sass/jekyll-theme-minimal.scss
+@mixin relative-font-size($ratio) {
+  font-size: #{$ratio}rem;
+}
 
+.img-profile{
+  height: auto;
+  width: 75%;
+  position: relative;
+}
 .div_div_two{
   display: inline-block;
   width: 100%;
@@ -13,4 +21,20 @@
   width: 50%;
   float: right;
   -webkit-font-smoothing:subpixel-antialiased;
+}
+
+.svg-icon{
+  display: grid;
+  padding: 5px 5px 2px 0;
+  width: 2em;
+  height: 2em;
+}
+
+.social-media-list {
+  @include relative-font-size(0.9375);
+  color: $brand-color;
+  width: 100%;
+  height: 10%;
+  list-style: none;
+  margin-left: 0;
 }
