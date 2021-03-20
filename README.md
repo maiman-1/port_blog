@@ -3,7 +3,7 @@ layout: about
 title: About Me
 permalink: /about/
 ---
-Hello. I'm Muhammad Aiman bin Shamsiemon. Currently a student in Monash University
+Hello! I'm Muhammad Aiman bin Shamsiemon. Currently a student in Monash University
 Malaysia. I am 21 years old and currently studying in my second year of my
 Bachelor of Software Engineering degree. I made this website to showcase several
 of my projects that I've done as assignments in my degree and if there's a chance,
