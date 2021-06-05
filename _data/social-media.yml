@@ -5,12 +5,6 @@ email:
   title: 'Email'
   fa-icon: 'fa-envelope-square'
 
-twitter:
-  id: 'maimansham'
-  href: 'https://www.twitter.com/'
-  title: 'Twitter'
-  fa-icon: 'fa-twitter-square'
-
 github:
   id: 'maiman-1'
   href: 'https://github.com/'

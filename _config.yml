@@ -21,7 +21,6 @@ baseurl: "/port_blog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # Used from minima theme
 social_links:
-    twitter: maimansham
     github:  maiman-1
     linkedin: muhammad-aiman-bin-shamsiemon-2899a6197
     email: maimansham@gmail.com
