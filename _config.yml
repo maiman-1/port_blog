@@ -19,6 +19,11 @@ description: >- # this means to ignore newlines until "baseurl:"
   A blog post that host almost all of my previous code-related project in the duration of my university course and posibly even further in the future.
 baseurl: "/port_blog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# paginates setting
+paginate: 5
+
+
 # Used from minima theme
 social_links:
     github:  maiman-1
@@ -31,6 +36,7 @@ theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-paginate
 
 defaults:
   -
@@ -51,6 +57,7 @@ sass:
 # Include images
 include:
   - _static
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

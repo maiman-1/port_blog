@@ -1,0 +1,74 @@
+---
+layout: default
+---
+<div class="main-content" id="home">
+
+  <!--Taken from https://github.com/jekyll/minima/blob/master/_layouts/home.html-->
+
+  <!--Assign variables-->
+  {% if site.paginate %}
+    {% assign posts = paginator.posts %}
+  {% else %}
+    {% assign posts = site.posts %}
+  {% endif %}
+
+  {%- if posts.size > 0 -%}
+  <ul>
+    {%- assign date_format = "%b %-d, %Y" -%}
+    {% for post in posts %}
+      <li>
+        <h3>
+          <a href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a>
+        </h3>
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        {%- if post.excerpt -%}
+          {{ post.excerpt | truncate: 160}}
+        {%- endif -%}
+      </li>
+      <br>
+    {% endfor %}
+
+  </ul>
+
+  <!-- This part is to paginate the posts-->
+	{% if site.paginate %}
+		<div class="pager">
+			<div class="pagination">
+				<div>
+					{% if paginator.previous_page %}
+					<a href="{{ paginator.previous_page_path | relative_url}}" class="previous">
+					Previous
+					</a>
+					{% else %}
+						<span class="previous">End of Page</span>
+					{% endif %}
+					<span class="page_number ">
+						Page: {{ paginator.page }} of {{ paginator.total_pages }}
+					</span>
+					{% if paginator.next_page %}
+						<a href="{{ paginator.next_page_path | relative_url }}" class="next">Next</a>
+					{% else %}
+						<span class="next ">End of Page</span>
+					{% endif %}
+				</div>
+				
+				<br>
+				{% for page in (1..paginator.total_pages) %}
+					{%if page == paginator.page %}
+						<em> {{page}} </em>
+					{% elsif page == 1 %}
+						<a href="{{ '/' | relative_url }}">{{ page }}</a>
+					{% else %}
+						<a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+					{% endif %}
+					{% if page != paginator.total_pages - 1%}
+						<em>,</em>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	{%- endif %}
+
+  {%- endif -%}
+
+</div>
