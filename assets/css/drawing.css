@@ -1,0 +1,182 @@
+:root {
+  --skin-color: #2a6b2e;
+  --hand-color: #29572c;
+}
+
+div.drawing_outer_froggy {
+  height: 100vh;
+  min-height: 1000px;
+  background-color: aqua;
+  border: 5px solid black;
+  display: grid;
+  place-items: center;
+  overflow: auto;
+}
+
+div.drawing_froggy {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+div.drawing_froggy_head {
+  top: -100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid black;
+  background-color: var(--skin-color);
+  position: relative;
+  justify-content: center;
+  display: flex;
+  align-items: baseline;
+}
+div.drawing_froggy_head::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: inset -22px 5px 0 3px rgba(0, 0, 0, 0.2);
+}
+
+div.drawing_froggy_eye {
+  background: #742201;
+  border-radius: 50%;
+  width: 175px;
+  height: 175px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.drawing_froggy_eye::before {
+  content: "";
+  position: absolute;
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  box-shadow: inset -22px 5px 0 3px rgba(0, 0, 0, 0.9);
+}
+div.drawing_froggy_eye::after {
+  content: "";
+  position: absolute;
+  border: 5px solid #a52701;
+  width: 60px;
+  height: 20px;
+  background-color: black;
+}
+
+div.drawing_froggy_eye_left {
+  margin-left: -200px;
+}
+
+div.drawing_froggy_eye_right {
+  margin-left: 200px;
+}
+
+div.drawing_froggy_eye_cutout {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: var(--skin-color);
+  border-radius: 50%;
+  align-self: flex-end;
+  margin-bottom: -50px;
+}
+
+div.drawing_froggy_mouth {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  border: 2px solid black;
+  border-radius: 50%;
+  align-self: center;
+  -webkit-clip-path: circle(60% at 49% 100%);
+          clip-path: circle(60% at 49% 100%);
+}
+
+div.drawing_froggy_body {
+  width: 400px;
+  height: 400px;
+  background-color: black;
+  -webkit-clip-path: ellipse(40% 50% at 51% 50%);
+          clip-path: ellipse(40% 50% at 51% 50%);
+  position: absolute;
+  top: 50px;
+  box-sizing: border-box;
+}
+
+div.drawing_froggy_body_border {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 390px;
+  height: 390px;
+  background-color: var(--skin-color);
+  -webkit-clip-path: ellipse(40% 50% at 51% 50%);
+          clip-path: ellipse(40% 50% at 51% 50%);
+}
+div.drawing_froggy_body_border::after, div.drawing_froggy_body_border::before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  width: 80px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid black;
+  -webkit-clip-path: circle(60% at 49% 100%);
+          clip-path: circle(60% at 49% 100%);
+}
+div.drawing_froggy_body_border::before {
+  left: 50px;
+}
+div.drawing_froggy_body_border::after {
+  right: 50px;
+}
+
+div.drawing_froggy_foot {
+  position: absolute;
+  width: 160px;
+  height: 120px;
+  top: 370px;
+  background-color: var(--skin-color);
+  border: 5px solid black;
+  border-radius: 50%;
+}
+
+div.drawing_froggy_foot_left {
+  left: -30px;
+}
+
+div.drawing_froggy_foot_right {
+  right: -30px;
+}
+
+div.drawing_froggy_bg {
+  position: absolute;
+  height: 100px;
+  width: 150px;
+  border-radius: 30%;
+  box-shadow: -100px 0px rgba(0, 255, 0, 0.5), -80px 180px rgba(255, 0, 0, 0.5), 130px 95px rgba(255, 0, 255, 0.5), 180px 275px rgba(255, 255, 0, 0.5), -110px 360px rgba(0, 0, 0, 0.5);
+  -webkit-animation: drawing_froggy_bg_anim 2s infinite alternate;
+          animation: drawing_froggy_bg_anim 2s infinite alternate;
+}
+
+@-webkit-keyframes drawing_froggy_bg_anim {
+  from {
+    box-shadow: -100px 0px rgba(0, 255, 0, 0.5), -80px 180px rgba(255, 0, 0, 0.5), 130px 95px rgba(255, 0, 255, 0.5), 180px 275px rgba(255, 255, 0, 0.5), -110px 360px rgba(0, 0, 0, 0.5);
+  }
+  to {
+    box-shadow: -250px 0px rgba(0, 255, 0, 0.5), -230px 180px rgba(255, 0, 0, 0.5), 280px 95px rgba(255, 0, 255, 0.5), 290px 275px rgba(255, 255, 0, 0.5), -290px 360px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes drawing_froggy_bg_anim {
+  from {
+    box-shadow: -100px 0px rgba(0, 255, 0, 0.5), -80px 180px rgba(255, 0, 0, 0.5), 130px 95px rgba(255, 0, 255, 0.5), 180px 275px rgba(255, 255, 0, 0.5), -110px 360px rgba(0, 0, 0, 0.5);
+  }
+  to {
+    box-shadow: -250px 0px rgba(0, 255, 0, 0.5), -230px 180px rgba(255, 0, 0, 0.5), 280px 95px rgba(255, 0, 255, 0.5), 290px 275px rgba(255, 255, 0, 0.5), -290px 360px rgba(0, 0, 0, 0.5);
+  }
+}/*# sourceMappingURL=drawing.css.map */

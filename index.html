@@ -34,37 +34,30 @@ layout: default
 	{% if site.paginate %}
 		<div class="pager">
 			<div class="pagination">
-				<div>
-					{% if paginator.previous_page %}
-					<a href="{{ paginator.previous_page_path | relative_url}}" class="previous">
-					Previous
-					</a>
-					{% else %}
-						<span class="previous">End of Page</span>
-					{% endif %}
-					<span class="page_number ">
-						Page: {{ paginator.page }} of {{ paginator.total_pages }}
-					</span>
-					{% if paginator.next_page %}
-						<a href="{{ paginator.next_page_path | relative_url }}" class="next">Next</a>
-					{% else %}
-						<span class="next ">End of Page</span>
-					{% endif %}
-				</div>
+				{% if paginator.previous_page %}
+				<a class="button_navigation" href="{{ paginator.previous_page_path | relative_url}}" class="previous">
+				← Previous
+				</a>
+				{% else %}
+					<span class="previous button_navigation">← Previous</span>
+				{% endif %}
+				<span class="page_number ">
+					{% for page in (1..paginator.total_pages) %}
+						{%if page == paginator.page %}
+							<span class="button_navigation"> {{page}} </span>
+						{% elsif page == 1 %}
+							<a class="button_navigation href="{{ '/' | relative_url }}">{{ page }}</a>
+						{% else %}
+							<a class="button_navigation" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+						{% endif %}
+					{% endfor %}
+				</span>
+				{% if paginator.next_page %}
+					<a class="button_navigation" href="{{ paginator.next_page_path | relative_url }}" class="next">Next →</a>
+				{% else %}
+					<span class="next button_navigation">Next →</span>
+				{% endif %}
 				
-				<br>
-				{% for page in (1..paginator.total_pages) %}
-					{%if page == paginator.page %}
-						<em> {{page}} </em>
-					{% elsif page == 1 %}
-						<a href="{{ '/' | relative_url }}">{{ page }}</a>
-					{% else %}
-						<a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
-					{% endif %}
-					{% if page != paginator.total_pages - 1%}
-						<em>,</em>
-					{% endif %}
-				{% endfor %}
 			</div>
 		</div>
 	{%- endif %}

@@ -48,6 +48,34 @@ $table-header-bg-color: lighten($brand-color, 43%) !default;
 $table-header-border:   lighten($brand-color, 37%) !default;
 $table-border-color:    $border-color-01 !default;
 
+// pagination on home page
+a.button_navigation, span.button_navigation{
+  display: inline-block;
+  min-width: 3rem;
+  width: fit-content;
+  min-height: 2rem;
+  height: 2rem;
+  background-color: $brand-color-light;
+  background-image: linear-gradient($code-background-color 2%, $brand-color-dark 95%, $brand-color-light 100%);
+  border: 2px solid #aaa;
+  border-bottom: 2px solid $brand-color;
+  padding: 0.25rem;
+  margin: 1rem;
+  color: white;
+  text-align: center;
+  border-radius: 15%;
+  text-decoration: none;
+}
+
+span.button_navigation{
+  box-shadow: inset 1rem 1rem 3rem #555;
+  background-color: $brand-color-dark;
+}
+
+a.button_navigation:hover, a.button_navigation:active{
+  box-shadow: inset 1rem 1rem 3rem #555;  
+  background-color: black;
+}
 // Load the other scss in
 @import
   "header",
