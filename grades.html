@@ -1,0 +1,60 @@
+---
+layout: default
+title: Grades
+---
+<!--Links to various part of pages for those interested in some parts-->
+<h1>Navigations</h1>
+<ul>
+	<li><a href="#grades_units_score">Grades marks</a></li>
+	<li><a href="#aus_cgpa">Australian CGPA and WAM</a></li>
+	<li><a href="#mal_cgpa">Malaysian GPA and CGPA</a></li>
+</ul>
+
+<h1 id="grades_units_score">Grades marks</h1>
+<!--Set first table for monash grades-->
+<table>
+	{% for row in site.data.unit_scores %}
+		{% if forloop.first %}
+			<tr>
+			{% for pair in row %}
+				<th>{{pair[0]}}</th>
+			{% endfor %}
+			</tr>
+		{% endif %}
+		{% tablerow pair in row %}
+			{{ pair[1]}}
+		{% endtablerow %}
+	{% endfor %}
+</table>
+
+<h1 id="aus_cgpa">Australian CGPA and WAM</h1>
+<table>
+	{% for row in site.data.aus_cgpa_wam %}
+		{% if forloop.first %}
+			<tr>
+			{% for pair in row %}
+				<th>{{pair[0]}}</th>
+			{% endfor %}
+			</tr>
+		{% endif %}
+		{% tablerow pair in row %}
+			{{ pair[1]}}
+		{% endtablerow %}
+	{% endfor %}
+</table>
+
+<h1 id="mal_cgpa">Malaysian GPA and CGPA</h1>
+<table>
+	{% for row in site.data.mal_cgpa %}
+		{% if forloop.first %}
+			<tr>
+			{% for pair in row %}
+				<th>{{pair[0]}}</th>
+			{% endfor %}
+			</tr>
+		{% endif %}
+		{% tablerow pair in row %}
+			{{ pair[1]}}
+		{% endtablerow %}
+	{% endfor %}
+</table>
